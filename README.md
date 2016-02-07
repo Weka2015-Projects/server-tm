@@ -1,34 +1,5 @@
 
 # 
 
-it's a real sweet app
+https://arcane-inlet-35134.herokuapp.com/
 
-## how
-
-### install
-
-```
-git clone https://github.com/author/
-cd 
-npm install
-```
-
-## develop
-
-```
-npm start
-```
-
-browse to <http://localhost:9966/>.
-
-## test
-
-```
-npm test
-```
-
-## deploy
-
-```
-npm run deploy
-```
