@@ -6,6 +6,7 @@ const koaBody = require('koa-better-body')
 const router = require('koa-router')()
 const request = require('superagent')
 const app = koa()
+const port = process.env.PORT || 4000
 
 
 
@@ -14,4 +15,4 @@ router.get('/', function *(next){
 })
 app.use(router.routes())
 
-app.listen(5000, () => console.log('Listening on port 5000'))
+app.listen(port, () => console.log('Listening on port ' + port))
