@@ -1,12 +1,12 @@
 'use strict'
 
+import 'babel-polyfill'
 const koa = require('koa')
 const koaBody = require('koa-better-body')
 const router = require('koa-router')()
 const request = require('superagent')
 const app = koa()
-// const port = process.env.PORT || 4000
-// const server = require('http').createServer(app.callback()).listen(port)
+
 
 
 router.get('/', function *(next){
