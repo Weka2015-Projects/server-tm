@@ -4,7 +4,6 @@ require('babel-polyfill') // lets us use es6 stuff
 const koa = require('koa')
 const Router = require('koa-resource-router')
 const koaBody = require('koa-better-body')
-const path = require('path')
 const knex = require('koa-knex')
 
 const app = module.exports = koa() // export koa app for testing
