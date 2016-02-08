@@ -7,7 +7,10 @@ module.exports = {
     connection: {
       database: 'arcane_products_development',
       user: 'apprentice',
-      password: 'password'
+      password: ''
+    },
+    migrations: {
+      tableName: 'knex_migrations'
     }
   },
 
