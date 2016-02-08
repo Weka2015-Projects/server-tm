@@ -2,7 +2,7 @@
 
 require('babel-polyfill') // lets us use es6 stuff
 const koa = require('koa')
-const Resource = require('koa-resource-router')
+const Router = require('koa-resource-router')
 const koaBody = require('koa-better-body')
 const path = require('path')
 const knex = require('koa-knex')
@@ -24,10 +24,12 @@ app.use(knex({
   searchPath: 'public'
 }))
 
-const products = new Resource('products', {
+const products = new Router('products', {
   // GET /products
   index: function *(next) {
-    this.body = yield { products: this.knex('products')}
+    const res = yield this.knex.raw('SELECT * FROM products') // select all products direct with knex
+    this.body = res.rows // just grab the part of the returned results we need
+    this.status = 200 // set status to ok
   }
 })
 
